@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{339DDB76-E415-A490-487F-15EB3524B718}") = "InteLipSync", "Assembly-CSharp.csproj", "{44357521-7DD3-A221-604C-0A26EA12966E}"
+EndProject
+Project("{339DDB76-E415-A490-487F-15EB3524B718}") = "InteLipSync", "Assembly-CSharp-Editor.csproj", "{ECF5CA75-2ABD-B599-DDDF-E11596F48E0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44357521-7DD3-A221-604C-0A26EA12966E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44357521-7DD3-A221-604C-0A26EA12966E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44357521-7DD3-A221-604C-0A26EA12966E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44357521-7DD3-A221-604C-0A26EA12966E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF5CA75-2ABD-B599-DDDF-E11596F48E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF5CA75-2ABD-B599-DDDF-E11596F48E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF5CA75-2ABD-B599-DDDF-E11596F48E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF5CA75-2ABD-B599-DDDF-E11596F48E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

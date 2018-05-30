@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/InteLipSync/InteLipSync.unity
+  isLoaded: 1
+  isActive: 1

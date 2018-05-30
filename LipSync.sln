@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{74A750DD-3E71-1403-17AD-44D6CE5D32A0}") = "LipSync", "Assembly-CSharp.csproj", "{5E7F8A1C-65D0-D70F-4139-D6446EB884FB}"
+EndProject
+Project("{74A750DD-3E71-1403-17AD-44D6CE5D32A0}") = "LipSync", "Assembly-CSharp-Editor.csproj", "{B96FB6C1-CFCC-1A17-16B6-42132F62F37E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E7F8A1C-65D0-D70F-4139-D6446EB884FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7F8A1C-65D0-D70F-4139-D6446EB884FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7F8A1C-65D0-D70F-4139-D6446EB884FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7F8A1C-65D0-D70F-4139-D6446EB884FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B96FB6C1-CFCC-1A17-16B6-42132F62F37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B96FB6C1-CFCC-1A17-16B6-42132F62F37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B96FB6C1-CFCC-1A17-16B6-42132F62F37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B96FB6C1-CFCC-1A17-16B6-42132F62F37E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

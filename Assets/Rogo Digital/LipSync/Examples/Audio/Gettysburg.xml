@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Exported from RogoDigital LipSync LiteLite 1.1. Exported at 11/19/2017 12:36:34 PM-->
+<!--Note: This format cannot directly reference the linked AudioClip like a LipSyncData asset can. It is advised that you use that format instead unless you need to process the data further outside of Unity.-->
+<LipSyncData>
+	<version>1.1</version>
+	<transcript />
+	<length>10</length>
+	<phonemes>
+		<marker time="0.032" phoneme="E" />
+		<marker time="0.25" phoneme="L" />
+		<marker time="0.413" phoneme="CDGKNRSThYZ" />
+	</phonemes>
+</LipSyncData>
