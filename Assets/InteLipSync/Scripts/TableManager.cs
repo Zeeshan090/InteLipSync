@@ -5,50 +5,62 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 
-public class TableManager : MonoBehaviour {
+public class TableManager : MonoBehaviour
+{
 
+    public Text log;
     public RectTransform table;
-    public GridLayoutGroup grid;
+    public GameObject scrollView;
+    GridLayoutGroup grid;
     Hashtable tableElements = new Hashtable();
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         grid = table.GetComponent<GridLayoutGroup>();
         grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-        grid.constraintCount = 2;
+        scrollView.SetActive(false);
 
         tableElements = new Hashtable();
 
-        listNewsTopics("topics_list.txt");
+        //    listNewsTopics("topics_list");
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
 
     void fillTable(string title, List<string> names, List<List<string>> data)
     {
-        Debug.Log(data.Count);
+        scrollView.SetActive(true);
+
+        //log.text = data.Count+"";
         grid.constraintCount = names.Count;
-        for(int i=0;i<names.Count;i++)
+        for (int i = 0; i < names.Count; i++)
         {
-            GameObject go = new GameObject("col_name"+i, typeof(RectTransform));
+            GameObject go = new GameObject("col_name" + i, typeof(RectTransform));
             go.transform.SetParent(table.transform);
             Text txt = go.AddComponent<Text>();
             txt.text = names[i];
             txt.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            txt.fontSize = 20;
+            txt.color = Color.black;
+            txt.fontStyle = FontStyle.Bold;
 
         }
-
         for (int i = 0; i < data.Count; i++)
         {
+            //log.text += " hre ";
             add2Table(data[i][0], data[i], names);
+            //log.text += " "+data[i][0] + " " + data[i][1];
         }
     }
 
     void add2Table(string id, List<string> row, List<string> names)
     {
+        //log.text += "\n" + id + " " + row[1];
         List<GameObject> elementsRow = new List<GameObject>();
         for (int j = 0; j < row.Count; j++)
         {
@@ -57,6 +69,8 @@ public class TableManager : MonoBehaviour {
             Text txt = go.AddComponent<Text>();
             txt.text = row[j];
             txt.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            txt.fontSize = 20;
+            txt.color = Color.black;
 
             elementsRow.Add(go);
         }
@@ -92,6 +106,8 @@ public class TableManager : MonoBehaviour {
         string text = loader.text;
         string[] rows = text.Split('\n');
 
+        //log.text = text+" end";
+
         List<List<string>> data = new List<List<string>>();
         for (int i = 0; i < rows.Length; i++)
         {
@@ -113,7 +129,7 @@ public class TableManager : MonoBehaviour {
     {
         emptyTable();
 
-        List<string> names=new List<string>(){"ID","Title","Day","Date","Time","ReminderDate", "ReminderTime","Venue","RelatedPersonnel"};
+        List<string> names = new List<string>() { "ID", "Title", "Day", "Date", "Time", "RemDate", "RemTime", "Venue", "RelPerson" };
 
         fillTable("Events", names, getData(filename));
     }
@@ -130,8 +146,8 @@ public class TableManager : MonoBehaviour {
     {
         List<string> row = new List<string>();
         row.AddRange(attrs.Split(','));
-       
-        updateTable(row[0],row);
+
+        updateTable(row[0], row);
     }
 
     void updateNewsTopic(string attrs)
@@ -144,12 +160,12 @@ public class TableManager : MonoBehaviour {
 
     void addNewsTopic(string attrs)
     {
-        List<string> names = new List<string>() {"ID", "Topic" };
+        List<string> names = new List<string>() { "ID", "Topic" };
 
         if (attrs.Length == 0)
         {
             emptyTable();
-            List<List<string>> data = new List<List<string>>() { new List<string>(){"1", "" }};
+            List<List<string>> data = new List<List<string>>() { new List<string>() { "1", "" } };
             fillTable("Add News Topic", names, data);
         }
         else
@@ -163,7 +179,7 @@ public class TableManager : MonoBehaviour {
 
     void addEvent(string attrs)
     {
-        List<string> names = new List<string>() { "ID", "Title", "Day", "Date", "Time", "ReminderDate", "ReminderTime", "Venue", "RelatedPersonnel" };
+        List<string> names = new List<string>() { "ID", "Title", "Day", "Date", "Time", "Rem Date", "Rem Time", "Venue", "Related Person" };
 
         if (attrs.Length == 0)
         {
@@ -190,5 +206,19 @@ public class TableManager : MonoBehaviour {
         }
 
         tableElements.Clear();
+        scrollView.SetActive(false);
+    }
+    int f = 0;
+    public void onStartClicked()
+    {
+        if (f == 0)
+        {
+            addEvent("");
+            f = 1;
+        }
+        else
+        {
+            addEvent("1,match,monday,20 may 2018,12:00 pm,20 may 2018,12:00 pm,ground,omair");
+        }
     }
 }

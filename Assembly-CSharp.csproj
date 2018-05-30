@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\InteLipSync\Scripts\Help.cs" />
      <Compile Include="Assets\InteLipSync\Scripts\MyLipSync.cs" />
      <Compile Include="Assets\InteLipSync\Scripts\TableManager.cs" />
      <Compile Include="Assets\KudanAR\Samples\Flying\FlyBehaviour_RigidbodyVelocity.cs" />
